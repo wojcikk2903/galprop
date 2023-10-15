@@ -20,4 +20,17 @@ Inside the image you can enter
 
 and run
 
-	/bin/galprop -r example
+	./bin/galprop -r example
+
+## Run with non-embedded GalProp
+
+Run the image with your working directory available in the container as /galprop_data
+
+	docker run --rm -ti -v $(pwd):/galprop_data -v ./galprop_v57_release_r1:/galprop galprop bash
+
+Then you can compile GalProp
+
+	cd /galprop
+	bash ./install_galprop.sh
+
+The compiled files and executable are located in your local ./galprop_v57_release_r1 directory. Inside the container you can run the simulations.
