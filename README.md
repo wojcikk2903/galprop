@@ -26,7 +26,7 @@ and run
 
 Run the image with your working directory available in the container as /galprop_data
 
-	docker run --rm -ti -v $(pwd):/galprop_data -v ./galprop_v57_release_r1:/galprop galprop bash
+	docker run --rm -ti -v $(pwd):/galprop_data -v $(pwd)/galprop_v57_release_r1:/galprop galprop bash
 
 Then you can compile GalProp
 
